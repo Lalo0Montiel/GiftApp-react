@@ -11,18 +11,21 @@ export const useFetchGifs = (categoria) => { //categoria es lo que se esta guard
         const newImages = await getGifs(categoria) // categoria es lo que se va a almacenar en nuestro path
         setImages(newImages)
         setIsLoading(false)
+       
         
     }
 
 
     useEffect( ()=>{
       getImages()
+   
     }, [])
   
   
     return {
         images,
         isLoading,
+       
         
   }
     

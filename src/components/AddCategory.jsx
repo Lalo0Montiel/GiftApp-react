@@ -1,7 +1,8 @@
 import { useState } from "react"
-import { useFetchGifs } from "../hooks/useFetchGifs"
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 const AddCategory = ({onNewCategory}) => {
+ 
   const [inputValue, setInputValue]=useState("")
   
   
@@ -16,12 +17,12 @@ const AddCategory = ({onNewCategory}) => {
 
 
   const handleSubmit = (e) => { //función que va a almacenar cuando se de enter lo que se escribió en el input 
-    event.preventDefault() 
+    e.preventDefault() 
     //console.log("si sirvo")
     setInputValue("")
     
     if(inputValue.length > 1){onNewCategory(inputValue)} //se hace este if, para que no agregue cosas vacias cuando aprietas enter
-    
+   
   }
 
 
